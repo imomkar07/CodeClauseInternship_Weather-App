@@ -13,7 +13,9 @@ search.addEventListener('click', ()=>{
     if (city == '')
        return;
 
-    fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${APIKey}`
+    //for running file ,please uncomment the below block of code.
+
+    /* fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${APIKey}`
     ).then(Response => Response.json()).then(json =>{
 
         if(json.cod == '404'){
@@ -23,7 +25,7 @@ search.addEventListener('click', ()=>{
             weatherdetails.classList.remove('active');
             error404.classList.add('active');
             return;
-        }
+        } */
 
         const image = document.querySelector('.weather-box img');
         const temperature = document.querySelector('.weather-box .temperature');
